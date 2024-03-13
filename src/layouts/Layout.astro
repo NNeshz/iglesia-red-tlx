@@ -1,0 +1,24 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Navbar from '../components/Navbar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/Iglesia Red.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Iglesia Red | {title}</title>
+	</head>
+	<body class="bg-black">
+		<Navbar />
+		<slot />
+	</body>
+</html>
