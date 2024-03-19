@@ -1,16 +1,45 @@
-<nav class="mx-32 my-5 flex justify-between">
-  <a href="/">
-    <img src="Iglesia Red.png" class="h-8" />
-  </a>
-  <ul class="flex gap-x-8 font-bold text-slate-200">
-    <li>
-      <a href="/servir">Servir Sana</a>
-    </li>
-    <li>
-      <a href="/eventos">Eventos</a>
-    </li>
-    <li>
-      <a href="/grupos">Grupos CNXN</a>
-    </li>
-  </ul>
+<nav class="bg-black py-4 px-4 md:px-32">
+  <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+          <img src="/iglesia-red-tlx.webp" alt="Logo" class="h-6 mr-4">
+      </div>
+
+      <!-- Botón Hamburguesa (visible en dispositivos móviles) -->
+      <div class="flex md:hidden">
+          <button id="btnMenu" class="text-white focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+          </button>
+      </div>
+
+      <!-- Menú de Navegación (visible en dispositivos de escritorio) -->
+      <div class="hidden md:flex space-x-4">
+          <a href="/servir" class="text-white">Servir Sana</a>
+          <a href="/grupos" class="text-white">Grupos CNXN</a>
+          <a href="/eventos" class="text-white">Eventos</a>
+      </div>
+  </div>
+  
+  <!-- Menú desplegable (solo visible en dispositivos móviles) -->
+  <div id="menuDesplegable" class="md:hidden hidden mt-2">
+      <a href="/servir" class="block text-white py-2 font-normal text-xl">Servir Sana</a>
+      <a href="/grupos" class="block text-white py-2 font-normal text-xl">Grupos CNXN</a>
+      <a href="/eventos" class="block text-white py-2 font-normal text-xl">Eventos</a>
+  </div>
 </nav>
+
+<script>
+  // Script para mostrar/ocultar menú desplegable en dispositivos móviles
+  const btnMenu = document.getElementById('btnMenu');
+  const menuDesplegable = document.getElementById('menuDesplegable');
+
+  if (btnMenu && menuDesplegable) {
+    btnMenu.addEventListener('click', () => {
+      menuDesplegable.classList.toggle('hidden');
+    });
+  } else {
+    console.error('btnMenu or menuDesplegable is not found');
+  }
+</script>

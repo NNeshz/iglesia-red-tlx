@@ -1,4 +1,6 @@
 ---
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
 interface Props {
 	title: string;
 }
@@ -18,9 +20,17 @@ import Footer from '../components/Footer.astro'
 		<meta name="generator" content={Astro.generator} />
 		<title>Iglesia Red | {title}</title>
 	</head>
-	<body class="bg-black">
+	<body class="">
 		<Navbar />
 		<slot />
 		<Footer />
 	</body>
+
+	<style>
+		body {
+			font-family: 'Montserrat', sans-serif;
+			background-color: #000000;
+		}
+	</style>
 </html>
+
