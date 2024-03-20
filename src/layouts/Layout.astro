@@ -1,6 +1,6 @@
 ---
 // Supports weights 100-900
-import '@fontsource-variable/montserrat';
+import '@fontsource-variable/montserrat/wght-italic.css';
 interface Props {
 	title: string;
 }
@@ -20,7 +20,7 @@ import Footer from '../components/Footer.astro'
 		<meta name="generator" content={Astro.generator} />
 		<title>Iglesia Red | {title}</title>
 	</head>
-	<body class="">
+	<body class="max-w-full">
 		<Navbar />
 		<slot />
 		<Footer />
