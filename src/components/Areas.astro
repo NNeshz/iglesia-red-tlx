@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import worldIcon from "../../public/red-mundial.webp";
+
+import Slider from "./Slider.astro"
+---
+
+<section
+  class="h-screen flex flex-col justify-center items-center text-slate-100 px-6 md:px-32"
+>
+  <div class="flex justify-between items-center md:w-full">
+    <h3 class="text-5xl font-bold">ÁREAS DE SERVICIO</h3>
+    <Image src={worldIcon} alt={"Icono de un mundo"} class="h-12 w-12" />
+  </div>
+  <div class="text-left w-full">
+    <p class="text-xs uppercase">
+      Dios nos ha dotado de diversos dones para edificar su iglesia y podemos
+      emplearlos para llevar a más personas a conocerlo.
+    </p>
+  </div>
+  <Slider />
+</section>
